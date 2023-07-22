@@ -1,6 +1,8 @@
 <div class="wrapper">
   <div class="home">
-    <button (click)="showModal=!showModal" class="btn show-modal-btn">Button</button>
-    <app-modal (onClose)="showModal=false" *ngIf="showModal"></app-modal>
+    <button (click)="showModal = !showModal" class="btn show-modal-btn">
+      Button
+    </button>
+    <app-modal (onClose)="showModal = false" *ngIf="!showModal"></app-modal>
   </div>
 </div>

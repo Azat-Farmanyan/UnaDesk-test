@@ -8,4 +8,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class ModalComponent {
   @Output() onClose = new EventEmitter();
   @Output() onUpdate = new EventEmitter();
+
+  showRoles = false;
 }

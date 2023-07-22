@@ -20,6 +20,7 @@
   background-color: #fff;
   border-radius: 8px;
   z-index: 1000;
+  margin: 50px 0;
   .form-body {
     .modal-title {
       margin-bottom: 50px;
@@ -34,14 +35,78 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      padding: 10px;
+      // padding: 10px;
       gap: 30px;
+      height: 100%;
       .input-block {
+        position: relative;
         min-width: 353px;
 
         flex-grow: 1;
+
         @media only screen and (max-width: 600px) {
           min-width: 100%;
+        }
+        .role-arrow {
+          position: absolute;
+          bottom: 8px;
+          right: 16px;
+          cursor: pointer;
+        }
+        .rotate-icon {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+        .roles {
+          position: absolute;
+          z-index: 100;
+          background-color: #aa8f8f;
+          width: 100%;
+          padding: 10px 15px 10px 5px;
+
+          border-radius: 8px;
+          border: 1px solid var(--bg, #edf3fb);
+          background: var(--neutral-white, #fff);
+
+          /* Soft Shadow */
+          box-shadow: 0px 4px 30px 0px rgba(46, 45, 116, 0.1);
+          .roles-body {
+            max-height: 244px;
+            height: 100%;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+              width: 5px; /* width of the entire scrollbar */
+            }
+            &::-webkit-scrollbar-track {
+              background: #b9bcc0; /* color of the tracking area */
+              border-radius: 10px;
+              border: 2px solid#fff;
+            }
+            &::-webkit-scrollbar-thumb {
+              background-color: #035fcc; /* color of the scroll thumb */
+              border-radius: 20px; /* roundness of the scroll thumb */
+              border: 2px solid b9bcc0; /* creates padding around scroll thumb */
+            }
+
+            .roles-item {
+              color: var(--dark-grey, #737373);
+              font-variant-numeric: lining-nums proportional-nums;
+              font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
+
+              /* 16 reg */
+              font-family: Raleway;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%; /* 24px */
+              padding: 10px;
+              margin-right: 10px;
+            }
+          }
         }
         .input-label {
         }
@@ -49,5 +114,32 @@
         }
       }
     }
+    .allow-data-block {
+      .allow-title {
+        margin: 30px 0 15px;
+      }
+      .allows {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .allow-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          font-family: Raleway;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 24px */
+          .allow-icon {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .submit-btn {
+    margin-top: 50px;
   }
 }

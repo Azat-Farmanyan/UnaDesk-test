@@ -1,52 +1,212 @@
-<div (click)="onClose.emit()" class='bg'></div>
+<div (click)="onClose.emit()" class="bg"></div>
 
-<div class='form-block'>
-  <form class='form-body' action="#">
-    <h3 class='title-big modal-title'>Кастомизация ролей </h3>
-    <svg (click)="onClose.emit()" class='close-btn' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-      viewBox="0 0 24 24" fill="none">
+<div class="form-block">
+  <form class="form-body" action="#">
+    <h3 class="title-big modal-title">Кастомизация ролей</h3>
+    <svg
+      (click)="onClose.emit()"
+      class="close-btn"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
       <path
         d="M13.5387 12.0002L20.0803 5.4583C20.506 5.03278 20.506 4.34477 20.0803 3.91924C19.6548 3.49372 18.9668 3.49372 18.5413 3.91924L11.9995 10.4612L5.45793 3.91924C5.03221 3.49372 4.34441 3.49372 3.9189 3.91924C3.49318 4.34477 3.49318 5.03278 3.9189 5.4583L10.4605 12.0002L3.9189 18.5421C3.49318 18.9677 3.49318 19.6557 3.9189 20.0812C4.13096 20.2935 4.40978 20.4001 4.68841 20.4001C4.96704 20.4001 5.24567 20.2935 5.45793 20.0812L11.9995 13.5393L18.5413 20.0812C18.7535 20.2935 19.0322 20.4001 19.3108 20.4001C19.5894 20.4001 19.8681 20.2935 20.0803 20.0812C20.506 19.6557 20.506 18.9677 20.0803 18.5421L13.5387 12.0002Z"
-        fill="#035FCC" />
+        fill="#035FCC"
+      />
     </svg>
 
     <div class="inputs">
-
       <div class="input-block">
-        <label class='input-label' for="name">Имя пользователя</label>
-        <input disabled id='name' class='input read-only' type="text" placeholder='Имя пользователя'
-          value='Имя пользователя'>
+        <label class="input-label" for="name">Имя пользователя</label>
+        <input
+          disabled
+          id="name"
+          class="input read-only"
+          type="text"
+          placeholder="Имя пользователя"
+          value="Имя пользователя"
+        />
       </div>
 
       <div class="input-block">
-        <label class='input-label' for="name">Имя пользователя</label>
-        <input disabled id='name' class='input read-only' type="text" placeholder='Имя пользователя'
-          value='Имя пользователя'>
+        <label class="input-label" for="name">Балансовая единица</label>
+        <input
+          disabled
+          id="name"
+          class="input read-only"
+          type="text"
+          placeholder="ООО Организация"
+          value=" ООО Организация"
+        />
       </div>
 
       <div class="input-block">
-        <label class='input-label' for="name">Имя пользователя</label>
-        <input disabled id='name' class='input read-only' type="text" placeholder='Имя пользователя'
-          value='Имя пользователя'>
+        <label class="input-label" for="name"
+          >Идентификатор пользователя (UID)</label
+        >
+        <input
+          disabled
+          id="name"
+          class="input read-only"
+          type="text"
+          placeholder="7uGah5Wx202kagS7"
+          value="7uGah5Wx202kagS7"
+        />
       </div>
 
       <div class="input-block">
-        <label class='input-label' for="name">Имя пользователя</label>
-        <input disabled id='name' class='input read-only' type="text" placeholder='Имя пользователя'
-          value='Имя пользователя'>
+        <label class="input-label" for="name">E-mail</label>
+        <input
+          disabled
+          id="name"
+          class="input read-only"
+          type="text"
+          placeholder="mail@gmail.com"
+          value="mail@gmail.com"
+        />
       </div>
 
       <div class="input-block">
-        <img class='required-star' src="../../assets/icons/required-icon-star_.svg" alt="required">
-        <label class='input-label' for="name">Роль</label>
-        <input id='name' class='input ' type="text" placeholder='Имя пользователя' value='Имя пользователя'>
+        <img
+          class="required-star"
+          src="../../assets/icons/required-icon-star_.svg"
+          alt="required"
+        />
+        <label class="input-label" for="name">Роль</label>
+        <input
+          id="name"
+          class="input"
+          type="text"
+          placeholder="Автор"
+          value="Автор"
+        />
+        <div
+          (click)="showRoles = !showRoles"
+          [ngClass]="{ 'rotate-icon': showRoles }"
+          class="role-arrow rotate-icon"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.87376 5.69383C2.23825 5.30209 2.8292 5.30209 3.19369 5.69383L9.34042 12.3C9.70491 12.6918 10.2959 12.6918 10.6604 12.3L16.8071 5.69383C17.1716 5.30209 17.7625 5.30209 18.127 5.69383C18.4915 6.08556 18.4915 6.72069 18.127 7.11242L11.9803 13.7186C10.8868 14.8938 9.11396 14.8938 8.02049 13.7186L1.87376 7.11242C1.50927 6.72069 1.50927 6.08556 1.87376 5.69383Z"
+              fill="black"
+              fill-opacity="0.2"
+            />
+          </svg>
+        </div>
+        <div *ngIf="showRoles" class="roles">
+          <ul class="roles-body">
+            <li class="roles-item">Роль 1</li>
+            <li class="roles-item">Роль 2</li>
+            <li class="roles-item">Роль 3</li>
+            <li class="roles-item">Роль 4</li>
+            <li class="roles-item">Роль 5</li>
+            <li class="roles-item">Роль 6</li>
+          </ul>
+        </div>
       </div>
 
       <div class="input-block">
-
-        <label class='input-label' for="name">Имя пользователя</label>
-        <input id='name' class='input ' type="text" placeholder='Имя пользователя' value='Имя пользователя'>
+        <label class="input-label" for="name">Открыть доступ к:</label>
+        <input
+          id="name"
+          class="input"
+          type="text"
+          placeholder="mail@gmail.com"
+        />
       </div>
     </div>
+
+    <div class="allow-data-block">
+      <h3 class="title-big allow-title">Доступные данные:</h3>
+      <ul class="allows">
+        <li class="allow-item">
+          <span class="allow-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10 19.4C15.1915 19.4 19.4 15.1915 19.4 10C19.4 4.80852 15.1915 0.6 10 0.6C4.80852 0.6 0.6 4.80852 0.6 10C0.6 15.1915 4.80852 19.4 10 19.4ZM10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                fill="#BD1A41"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.5564 10.3704H4.44531V9.77039H15.5564V10.3704Z"
+                fill="#BD1A41"
+              />
+            </svg>
+          </span>
+          Проект
+        </li>
+        <li class="allow-item">
+          <span class="allow-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10 19.4C15.1915 19.4 19.4 15.1915 19.4 10C19.4 4.80852 15.1915 0.6 10 0.6C4.80852 0.6 0.6 4.80852 0.6 10C0.6 15.1915 4.80852 19.4 10 19.4ZM10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                fill="#BD1A41"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.5564 10.3704H4.44531V9.77039H15.5564V10.3704Z"
+                fill="#BD1A41"
+              />
+            </svg>
+          </span>
+          Очень длинное название проекта
+        </li>
+        <li class="allow-item">
+          <span class="allow-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10 19.4C15.1915 19.4 19.4 15.1915 19.4 10C19.4 4.80852 15.1915 0.6 10 0.6C4.80852 0.6 0.6 4.80852 0.6 10C0.6 15.1915 4.80852 19.4 10 19.4ZM10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                fill="#BD1A41"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.5564 10.3704H4.44531V9.77039H15.5564V10.3704Z"
+                fill="#BD1A41"
+              />
+            </svg>
+          </span>
+          Название проекта
+        </li>
+      </ul>
+    </div>
+    <button class="btn submit-btn">Сохранить</button>
   </form>
 </div>

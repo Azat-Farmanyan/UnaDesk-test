@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
   all: unset;
   display: revert;
 }
@@ -109,10 +111,7 @@ body {
 .title-big {
   color: var(--text, #171725);
   font-variant-numeric: lining-nums proportional-nums;
-  font-feature-settings:
-    "cv11" on,
-    "cv01" on,
-    "ss01" on;
+  font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
 
   /* 24 Semib */
   font-family: Raleway;
@@ -184,6 +183,9 @@ input {
   line-height: 150%; /* 24px */
 
   width: 100%;
+
+  &:hover {
+  }
 }
 ::placeholder {
   color: var(--grey, #b9bcc0);
