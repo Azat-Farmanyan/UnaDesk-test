@@ -1,7 +1,7 @@
 <div (click)="onClose.emit()" class="bg"></div>
 
 <div class="form-block">
-  <form class="form-body" action="#">
+  <form class="form-body" [formGroup]="form" (ngSubmit)="update()">
     <h3 class="title-big modal-title">Кастомизация ролей</h3>
     <svg
       (click)="onClose.emit()"
@@ -124,6 +124,23 @@
           type="text"
           placeholder="mail@gmail.com"
         />
+        <div class="role-arrow rotate-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.87376 5.69383C2.23825 5.30209 2.8292 5.30209 3.19369 5.69383L9.34042 12.3C9.70491 12.6918 10.2959 12.6918 10.6604 12.3L16.8071 5.69383C17.1716 5.30209 17.7625 5.30209 18.127 5.69383C18.4915 6.08556 18.4915 6.72069 18.127 7.11242L11.9803 13.7186C10.8868 14.8938 9.11396 14.8938 8.02049 13.7186L1.87376 7.11242C1.50927 6.72069 1.50927 6.08556 1.87376 5.69383Z"
+              fill="black"
+              fill-opacity="0.2"
+            />
+          </svg>
+        </div>
       </div>
     </div>
 

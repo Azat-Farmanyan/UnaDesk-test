@@ -20,7 +20,9 @@
   background-color: #fff;
   border-radius: 8px;
   z-index: 1000;
-  margin: 50px 0;
+  max-height: 90vh;
+  // margin: 50px 0;
+  overflow-y: auto;
   .form-body {
     .modal-title {
       margin-bottom: 50px;
@@ -77,25 +79,8 @@
             max-height: 244px;
             height: 100%;
             overflow-y: auto;
-
-            &::-webkit-scrollbar {
-              width: 5px; /* width of the entire scrollbar */
-            }
-            &::-webkit-scrollbar-track {
-              background: #b9bcc0; /* color of the tracking area */
-              border-radius: 10px;
-              border: 2px solid#fff;
-            }
-            &::-webkit-scrollbar-thumb {
-              background-color: #035fcc; /* color of the scroll thumb */
-              border-radius: 20px; /* roundness of the scroll thumb */
-              border: 2px solid b9bcc0; /* creates padding around scroll thumb */
-            }
-
             .roles-item {
               color: var(--dark-grey, #737373);
-              font-variant-numeric: lining-nums proportional-nums;
-              font-feature-settings: "cv11" on, "cv01" on, "ss01" on;
 
               /* 16 reg */
               font-family: Raleway;

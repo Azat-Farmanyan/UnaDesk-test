@@ -1,8 +1,8 @@
 <div class="wrapper">
   <div class="home">
     <button (click)="showModal = !showModal" class="btn show-modal-btn">
-      Button
+      Открыть модальное окно
     </button>
-    <app-modal (onClose)="showModal = false" *ngIf="!showModal"></app-modal>
+    <app-modal (onClose)="showModal = false" *ngIf="showModal"></app-modal>
   </div>
 </div>
